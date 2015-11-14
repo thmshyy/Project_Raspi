@@ -1,0 +1,5 @@
+bin/
+libraries/
+build/
+RemoteSystemsTempFiles/
+.metadata/
