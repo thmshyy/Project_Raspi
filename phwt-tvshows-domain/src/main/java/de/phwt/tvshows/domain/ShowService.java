@@ -1,5 +1,6 @@
 package de.phwt.tvshows.domain;
 
-public class ShowService {
-
+public interface ShowService
+{
+	Iterable<Show> getShows();
 }
