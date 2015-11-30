@@ -1,20 +1,17 @@
-package de.phwt.tvshows.domain;
-
+package de.phwt.tvshows.web;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Show
+public class MyJaxbBean
 {
 	public String name;
-	public int season;
 
-	public Show()
-	{}
+	public MyJaxbBean()
+	{} // JAXB needs this
 
-	public Show(final String name, final int season)
+	public MyJaxbBean(final String name, final int age)
 	{
 		this.name = name;
-		this.season = season;
 	}
 
 	public String getName()

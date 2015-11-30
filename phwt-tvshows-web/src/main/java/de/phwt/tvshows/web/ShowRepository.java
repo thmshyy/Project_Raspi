@@ -7,17 +7,14 @@ import de.phwt.tvshows.domain.Show;
 
 public class ShowRepository //implements ShowService
 {
-	//	List<Show> listShows();
-
 	public List<Show> getShows()
 	{
 		final ArrayList<Show> shows = new ArrayList<>();
-		shows.add(new Show("How I Met Your Mother"));
-		shows.add(new Show("Lost"));
-		shows.add(new Show("The Big Bang Theory"));
-		shows.add(new Show("Game of Thrones"));
+		shows.add(new Show("How I Met Your Mother", 2));
+		shows.add(new Show("Lost", 5));
+		shows.add(new Show("The Bing Bang Theory", 3));
+		shows.add(new Show("Game of Thrones", 7));
 
 		return shows;
 	}
-
 }
