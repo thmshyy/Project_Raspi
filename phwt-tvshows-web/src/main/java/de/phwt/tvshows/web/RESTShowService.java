@@ -30,13 +30,13 @@ public class RESTShowService
 		return new ShowRepository().getShows();
 	}
 
-	@GET
-	@Path("/getTitle")
-	@Produces(MediaType.APPLICATION_JSON)
-	public String getTitleInJSON()
-	{
-		return new Show("HIMYM", 1).getName();
-	}
+	/*	@GET
+		@Path("/getTitle")
+		@Produces(MediaType.APPLICATION_JSON)
+		public String getTitleInJSON()
+		{
+			return new Show("HIMYM", 1).getName();
+		}*/
 
 	@Path("/getRespones")
 	@GET

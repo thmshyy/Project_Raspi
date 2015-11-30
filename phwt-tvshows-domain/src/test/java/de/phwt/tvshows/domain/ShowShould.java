@@ -9,6 +9,8 @@ public class ShowShould
 	@Test
 	public void knowItsName()
 	{
-		assertEquals(new Show("the name").getName(), "the name");
+		final Show show = new Show();
+		show.setName("Lost");
+		assertEquals(show.getName(), "Lost");
 	}
 }
