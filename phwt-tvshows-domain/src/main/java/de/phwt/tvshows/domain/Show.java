@@ -1,25 +1,16 @@
 package de.phwt.tvshows.domain;
 
-<<<<<<< HEAD
+<<<<<<<HEAD
+
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
-public class Show
-{
-	public String name;
-	public int season;
-
-	public Show()
-	{}
-
-	public Show(final String name, final int season)
-=======
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
 @Entity
 //@NoSql(dataType = "Show", dataFormat = DataFormatType.MAPPED)
 public class Show

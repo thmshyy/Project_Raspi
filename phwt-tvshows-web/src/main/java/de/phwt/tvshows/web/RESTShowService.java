@@ -1,62 +1,25 @@
 package de.phwt.tvshows.web;
 
-import java.util.List;
+import java.io.IOException;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.GenericEntity;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
 
-import de.phwt.tvshows.domain.Show;
-import jersey.repackaged.com.google.common.collect.Lists;
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
 
 @Path("/ShowService")
 public class RESTShowService
 {
+	final ObjectMapper mapper = new ObjectMapper();
+
 	@GET
+	@Path("/getShows")
 	@Produces("application/json")
-	public MyJaxbBean getMyBean()
+	public String getShowsInJSON() throws JsonGenerationException, JsonMappingException, IOException
 	{
-		return new MyJaxbBean("Agamemnon", 32);
-	}
-
-	@GET
-	@Path("/get")
-	@Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
-	public List<Show> getShowInJSON()
-	{
-		return new ShowRepository().getShows();
-	}
-
-	/*	@GET
-		@Path("/getTitle")
-		@Produces(MediaType.APPLICATION_JSON)
-		public String getTitleInJSON()
-		{
-			return new Show("HIMYM", 1).getName();
-		}*/
-
-	@Path("/getRespones")
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response get()
-	{
-		final ShowRepository entity = new ShowRepository();
-		final GenericEntity<List<ShowRepository>> entity1 = new GenericEntity<List<ShowRepository>>(Lists.newArrayList(entity))
-		{};
-		//entity = new GenericEntity<List<Stock>>(Lists.newArrayList(stock)) {};
-		return Response.ok(entity1).build();
-	}
-
-	@GET
-	@Path("/getList")
-	@Produces({ MediaType.APPLICATION_JSON })
-	public GenericEntity<List<Show>> getList()
-	{
-
-		return new GenericEntity<List<Show>>(new ShowRepository().getShows())
-		{};
+		return mapper.writeValueAsString(new ShowRepository().getShows());
 	}
 }
