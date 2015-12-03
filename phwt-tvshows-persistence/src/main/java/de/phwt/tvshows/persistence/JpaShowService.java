@@ -10,19 +10,37 @@ import de.phwt.tvshows.domain.Show;
 
 public class JpaShowService
 {
+
+	private static final String PERSISTENCE_UNIT_NAME = "EclipselinkJPA";
+	private static EntityManagerFactory factory;
+
 	public static void main(final String[] args)
 	{
 
-		final EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("Eclipselink_JPA");
-		final EntityManager entitymanager = emfactory.createEntityManager();
+		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		final EntityManager em = factory.createEntityManager();
 
-		//		Show show;
-		//		show = entitymanager.find(Show.class, "Lost");
-		final List<Show> shows = entitymanager.createQuery("SELECT s FROM Show s", Show.class).getResultList();
+		// read the existing entries and write to console
+		//		final Query q = em.createQuery("SELECT x.id FROM Show x", Show.class);
+		//		final List<Show> showList = q.getResultList();
+		final List<Show> shows = em.createQuery("SELECT x FROM Show x", Show.class).getResultList();
 
-		System.out.println(shows);
-		entitymanager.close();
-		emfactory.close();
+		for (int i = 0; i < shows.size(); i++)
+		//	for (final Show show : shows)
+		{
+			System.out.println(shows.get(i).getName() + " " + shows.get(i).getStaffel());
+		}
+		//		System.out.println("Show ID: " + showList.size());
+
+		// create new show
+		//em.getTransaction().begin();
+		//final Show show = new Show();
+		//show.setId(2);
+		//show.setName("Lost");
+		//em.persist(show);
+		//em.getTransaction().commit();
+
+		em.close();
 
 	}
 

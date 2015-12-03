@@ -11,6 +11,6 @@ public class ShowShould
 	{
 		final Show show = new Show();
 		show.setName("Lost");
-		assertEquals(show.getName(), "Lost");
+		assertEquals(show.getName(), 1);
 	}
 }

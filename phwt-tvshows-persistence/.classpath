@@ -14,25 +14,16 @@
 	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/javax.persistence.source_2.1.0.v201304241213.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/javax.persistence_2.1.0.v201304241213.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/javax.resource-api-1.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/mongo-java-driver-2.13.3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen.source_2.6.1.v20150916-55dc7c3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.modelgen_2.6.1.v20150916-55dc7c3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.jpars.source_2.6.1.v20150916-55dc7c3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.jpars_2.6.1.v20150916-55dc7c3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.nosql-2.5.0-RC2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/eclipselink.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/extension/org.eclipse.persistence.extension.source_2.6.1.v20150916-55dc7c3.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/extension/org.eclipse.persistence.extension_2.6.1.v20150916-55dc7c3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/moxy/javax.mail_1.4.0.v201005080615.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/moxy/javax.validation_1.1.0.v201304101302.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/moxy/jaxb-core_2.2.11.v201407311112.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/moxy/jaxb-xjc_2.2.11.v201407311112.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/moxy/org.glassfish.javax.json_1.0.4.v201311181159.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.antlr.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.asm.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.core.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.jpa.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.moxy.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/org.eclipse.persistence.oracle.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/eclipselink/jlib/jpa/postgresql-9.4-1206-jdbc4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.antlr.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.asm.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.jpa.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.jpa.modelgen.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.moxy.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Glassfish/glassfish3/glassfish/modules/org.eclipse.persistence.oracle.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Vivien/Desktop/Neu/IT_Projekt/Java_Project/Project_Raspi/libraries/validation-api-1.0.0.GA.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
