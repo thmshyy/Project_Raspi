@@ -1,0 +1,49 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp' 
+ 
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    	compile 'commons-collections:commons-collections:3.2',
+		'javax.persistence:persistence-api:1.0',
+		'org.eclipse.persistence:javax.persistence:2.1.0',
+
+		'postgresql:postgresql:9.1-901-1.jdbc4',
+		'org.eclipse.persistence:eclipselink:2.5.1',
+		'javax.resource:javax.resource-api:1.7'
+		
+
+
+
+	compile project(':phwt-tvshows-domain')
+    	
+
+	testCompile 'junit:junit:4.+'
+ 
+
+}
+
+version = '1.0'
+
+sourceCompatibility = '1.8'
+
+jar {
+	manifest.attributes provider: 'gradle'
+}
+
+configurations {
+    compile {
+        description = 'compile classpath'
+        transitive = true
+    }
+    runtime {
+        extendsFrom compile
+    }
+}
+configurations.compile {
+    description = 'compile classpath'
+}

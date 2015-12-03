@@ -1,0 +1,46 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war' 
+ 
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+    	compile 'commons-collections:commons-collections:3.2',
+		'javax.persistence:persistence-api:1.0',
+		'javax.servlet:javax.servlet-api:3.1.0',
+		'org.ops4j.base:ops4j-base-io:1.5.0'
+
+
+	
+	compile project(':phwt-tvshows-domain')
+    	
+
+	testCompile 'junit:junit:4.+'
+ 
+
+}
+
+version = '1.0'
+
+sourceCompatibility = '1.8'
+
+jar {
+	manifest.attributes provider: 'gradle'
+}
+
+configurations {
+    compile {
+        description = 'compile classpath'
+        transitive = true
+    }
+    runtime {
+        extendsFrom compile
+    }
+}
+configurations.compile {
+    description = 'compile classpath'
+}

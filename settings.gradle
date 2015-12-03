@@ -1,0 +1,1 @@
+include "phwt-tvshows-domain", "phwt-tvshows-persistence", "phwt-tvshows-web"

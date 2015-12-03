@@ -23,7 +23,7 @@ public class JpaShowService
 		// read the existing entries and write to console
 		//		final Query q = em.createQuery("SELECT x.id FROM Show x", Show.class);
 		//		final List<Show> showList = q.getResultList();
-		final List<Show> shows = em.createQuery("SELECT x FROM Show x", Show.class).getResultList();
+		final List<Show> shows = em.createQuery("SELECT x FROM Show x").getResultList();
 
 		for (int i = 0; i < shows.size(); i++)
 		//	for (final Show show : shows)
