@@ -17,6 +17,7 @@ public class Show
 	@Field(name = "_id")
 	private String id;
 
+	@Field(name = "name")
 	private String name;
 
 	public void setName(final String name)
@@ -27,5 +28,10 @@ public class Show
 	public String getName()
 	{
 		return name;
+	}
+	
+	public String toString()
+	{
+		return id + ": " + getName();
 	}
 }

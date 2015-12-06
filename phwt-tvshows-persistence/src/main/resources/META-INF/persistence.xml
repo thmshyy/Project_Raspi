@@ -14,8 +14,8 @@
 			<property name="eclipselink.nosql.property.mongo.port"
 				value="27017" />
 			<property name="eclipselink.nosql.property.mongo.host"
-				value="52.29.56.19" />
-			<property name="eclipselink.nosql.property.mongo.db" value="TVShows" />
+				value="localhost" />
+			<property name="eclipselink.nosql.property.mongo.db" value="test" />
 			<property name="eclipselink.logging.level" value="FINEST" />
 		</properties>
 	</persistence-unit>
