@@ -20,7 +20,7 @@ sourceCompatibility = 1.8
 
 version = '1.0'
 
-war.baseName = 'RestService-war'
+war.baseName = 'WebClient-war'
 
 
 project.webAppDirName = 'WebContent'
@@ -31,16 +31,13 @@ repositories {
 
 dependencies {
 
-def tomcatVersion = '7.0.57'
+def tomcatVersion = '8.0.28'
     tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
             "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
     tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
         exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'    
 
 	compile 'commons-collections:commons-collections:3.2',
-		'javax.persistence:persistence-api:1.0',
-		'javax.servlet:javax.servlet-api:3.1.0',
-		'org.ops4j.base:ops4j-base-io:1.5.0',
 		'javax.ws.rs:jsr311-api:1.1.1',
 		'javax.ws.rs:javax.ws.rs-api:2.0.1',
 		'com.sun.jersey:jersey-server:1.13',
@@ -48,7 +45,11 @@ def tomcatVersion = '7.0.57'
 		'com.sun.jersey:jersey-servlet:1.13',
 		'org.codehaus.jackson:jackson-mapper-asl:1.9.13',
 		'org.codehaus.jackson:jackson-core-asl:1.9.13',
-		'org.codehaus.jackson:jackson-jaxrs:1.9.13'
+		'org.codehaus.jackson:jackson-jaxrs:1.9.13',
+		'com.github.dirkraft:GetURI:0.0.3',
+		'com.github.dirkraft.GetURI:GetURI:0.0.4',
+		'javanettasks:javanettasks:1.0.29'
+
 
 	compile project(':phwt-tvshows-domain')
     	
