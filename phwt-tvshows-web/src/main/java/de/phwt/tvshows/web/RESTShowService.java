@@ -10,6 +10,8 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import de.phwt.tvshows.persistence.JpaShowService;
+
 @Path("/ShowService")
 public class RESTShowService
 {
@@ -20,6 +22,6 @@ public class RESTShowService
 	@Produces("application/json")
 	public String getShowsInJSON() throws JsonGenerationException, JsonMappingException, IOException
 	{
-		return mapper.writeValueAsString(new ShowRepository().getShows());
+		return mapper.writeValueAsString(new JpaShowService().getShows());
 	}
 }
