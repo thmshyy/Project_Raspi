@@ -28,14 +28,14 @@ public class RESTClient
 		System.out.println(webTarget.path("rest").path("ShowService").path("getShows").request().accept("application/json").get(Response.class).toString());
 
 		// json
-		System.out.println(webTarget.path("rest").path("ShowService").path("getShows").request().accept("application/json"));
+		//System.out.println(webTarget.path("rest").path("ShowService").path("getShows").request().accept("application/json"));
 
 		// json
 		//System.out.println(webTarget.path("rest").path("ShowService").path("getShows").request().accept(MediaType.APPLICATION_JSON).get(String.class));
 		final String response = webTarget.path("rest").path("ShowService").path("getShows").request().accept(MediaType.APPLICATION_JSON).get(String.class);
 		final Builder response1 = webTarget.path("rest").path("ShowService").path("getShows").request().accept(MediaType.APPLICATION_JSON);
 		System.out.println(response);
-		System.out.println(response1);
+		//System.out.println(response1);
 	}
 
 	public String getList()

@@ -1,107 +1,63 @@
 package de.phwt.tvshows.domain;
 
-//import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.eclipse.persistence.nosql.annotations.DataFormatType;
+import org.eclipse.persistence.nosql.annotations.Field;
+import org.eclipse.persistence.nosql.annotations.NoSql;
+
 @Entity
-public class Show//implements Serializable
+@NoSql(dataFormat = DataFormatType.MAPPED)
+public class Show
 {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	@GeneratedValue //(strategy = GenerationType.IDENTITY)
+	@Field(name = "_id")
+	private String id;
 
-	private int staffel;
-
-	public int getStaffel()
-	{
-		return staffel;
-	}
-
-	public void setStaffel(final int staffel)
-	{
-		this.staffel = staffel;
-	}
-
+	@Field(name = "name")
 	private String name;
-
-	public String getName()
-	{
-		return name;
-	}
 
 	public void setName(final String name)
 	{
 		this.name = name;
 	}
 
-	private String test;
-
-	public String getTest()
+	public String getName()
 	{
-		return test;
+		return name;
 	}
 
-	public void setTest(final String test)
+	@Field(name = "season")
+	private int season;
+
+	public int getSeason()
 	{
-		this.test = test;
+		return season;
 	}
 
-	//@Override
-	//public String toString()
-	//{
-	//	return "Hallo";
-	//}
+	public void setSeason(final int season)
+	{
+		this.season = season;
+	}
 
+	//	private String test;
+	//
+	//	public String getTest()
+	//	{
+	//		return test;
+	//	}
+	//
+	//	public void setTest(final String test)
+	//	{
+	//		this.test = test;
+	//	}
+
+	@Override
+	public String toString()
+	{
+		return id + ": " + getName();
+	}
 }
-
-/*package de.phwt.tvshows.domain;
-
-//import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Show//implements Serializable
-{
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
-
-	private int staffel;
-
-	public int getStaffel()
-	{
-		return staffel;
-	}
-
-	public void setStaffel(final int staffel)
-	{
-		this.staffel = staffel;
-	}
-
-	private String name;
-
-	public String getName()
-	{
-		return name;
-	}
-
-	public void setName(final String name)
-	{
-		this.name = name;
-	}
-
-	//@Override
-	//public String toString()
-	//{
-	//	return "Hallo";
-	//}
-
-}*/

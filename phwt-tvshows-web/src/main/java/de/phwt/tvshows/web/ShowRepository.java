@@ -10,6 +10,9 @@ public class ShowRepository //implements ShowService
 	public List<Show> getShows()
 	{
 		final List<Show> shows = new ArrayList<>();
+		shows.add(new Show());
+		shows.add(new Show());
+		shows.add(new Show());
 		return shows;
 	}
 }

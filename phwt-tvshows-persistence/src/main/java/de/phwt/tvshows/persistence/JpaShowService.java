@@ -1,5 +1,40 @@
 package de.phwt.tvshows.persistence;
 
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import de.phwt.tvshows.domain.Show;
+
+public class JpaShowService
+{
+
+	public static void main(final String[] args)
+	{
+
+		final EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("EclipselinkJPA");
+		final EntityManager entitymanager = emfactory.createEntityManager();
+
+		final List<Show> shows = entitymanager.createQuery("SELECT s FROM Show s").getResultList();
+
+		System.out.println("Shows: " + shows);
+
+		//		for (int i = 0; i < shows.size(); i++)
+
+		//		{
+		//			System.out.println(shows.get(i).getName() + " " + shows.get(i).getSeason());
+		//		}
+
+		entitymanager.close();
+		emfactory.close();
+	}
+
+}
+
+/*package de.phwt.tvshows.persistence;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,13 +93,13 @@ public class JpaShowService
 		List<Show> shows = new ArrayList<>();
 		shows = em.createQuery("SELECT x FROM Show x").getResultList();
 
-		/*for (int i = 0; i < result.size(); i++)
+		for (int i = 0; i < result.size(); i++)
 		//	for (final Show show : shows)
 		{
 			shows.add(new Show(result.get(i).), element); ( + " " + shows.get(i).getStaffel());
 		}
 		//		System.out.println("Show ID: " + showList.size());
-		*/
+
 		// create new show
 		//em.getTransaction().begin();
 		//final Show show = new Show();
@@ -77,4 +112,4 @@ public class JpaShowService
 		return shows;
 	}
 
-}
+}*/
