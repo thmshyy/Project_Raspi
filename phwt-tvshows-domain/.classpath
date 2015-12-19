@@ -38,5 +38,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/t.weit/Downloads/org.eclipse.persistence.nosql-2.5.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

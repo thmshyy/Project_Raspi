@@ -64,5 +64,7 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/t.weit/Downloads/org.eclipse.persistence.nosql-2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/t.weit/Downloads/mongo-java-driver-2.7.3.jar" sourcepath="C:/Users/t.weit/Downloads/mongo-java-driver-2.7.3-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
