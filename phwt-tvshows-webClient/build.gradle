@@ -1,0 +1,73 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+       classpath 'com.bmuschko:gradle-tomcat-plugin:2.0'
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'eclipse-wtp'
+apply plugin: 'war'
+apply plugin: 'com.bmuschko.tomcat'
+
+
+sourceCompatibility = 1.8
+
+
+war.baseName = 'ROOT'
+
+
+//project.webAppDirName = 'WebClient'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+def tomcatVersion = '8.0.28'
+    tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
+            "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}"
+    tomcat("org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}") {
+        exclude group: 'org.eclipse.jdt.core.compiler', module: 'ecj'    
+
+	compile	'org.glassfish.hk2.external:aopalliance-repackaged:2.4.0-b31',
+		'org.glassfish.hk2:hk2-api:2.4.0-b31',
+		'org.glassfish.hk2:hk2-locator:2.4.0-b31',
+		'org.glassfish.hk2:hk2-utils:2.4.0-b31',
+		'org.glassfish.hk2.external:javax.inject:2.4.0-b31',
+		'javax.ws.rs:javax.ws.rs-api:2.0.1',
+		'org.glassfish.jersey.core:jersey-client:2.22.1',
+		'org.glassfish.jersey.core:jersey-common:2.22.1',
+		'org.glassfish.jersey.bundles.repackaged:jersey-guava:2.22.1',
+		'javax.ws.rs:jsr311-api:1.1.1'
+
+
+
+	compile project(':phwt-tvshows-domain')
+    	
+
+	testCompile 'junit:junit:4.+'
+
+    }
+}
+
+sourceSets {
+        main {
+            java {
+                srcDir 'scr'
+            }
+        }
+    }
+
+//tomcatRun.contextPath = '/'
+//tomcatRunWar.contextPath = '/'
+
+jar {
+	manifest.attributes provider: 'gradle'
+}
+

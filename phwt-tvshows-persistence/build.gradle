@@ -5,19 +5,18 @@ apply plugin: 'eclipse-wtp'
 
 repositories {
 	mavenCentral()
-}
+	}
 
 dependencies {
     	compile 'commons-collections:commons-collections:3.2',
 		'javax.persistence:persistence-api:1.0',
 		'org.eclipse.persistence:javax.persistence:2.1.0',
-
 		'postgresql:postgresql:9.1-901-1.jdbc4',
 		'org.eclipse.persistence:eclipselink:2.5.1',
-		'javax.resource:javax.resource-api:1.7'
+		'javax.resource:javax.resource-api:1.7',
+		'org.mongodb:mongo-java-driver:2.7.3'
+		//'javax.resource:connector-api:1.5'
 		
-
-
 
 	compile project(':phwt-tvshows-domain')
     	
