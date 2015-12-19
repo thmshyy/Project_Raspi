@@ -1,5 +1,6 @@
 package de.phwt.tvshows.persistence;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -11,24 +12,18 @@ import de.phwt.tvshows.domain.Show;
 public class JpaShowService
 {
 
-	public static void main(final String[] args)
+	public List<Show> getShows()
 	{
 
 		final EntityManagerFactory emfactory = Persistence.createEntityManagerFactory("EclipselinkJPA");
 		final EntityManager entitymanager = emfactory.createEntityManager();
 
-		final List<Show> shows = entitymanager.createQuery("SELECT s FROM Show s").getResultList();
-
-		System.out.println("Shows: " + shows);
-
-		//		for (int i = 0; i < shows.size(); i++)
-
-		//		{
-		//			System.out.println(shows.get(i).getName() + " " + shows.get(i).getSeason());
-		//		}
+		List<Show> shows = new ArrayList();
+		shows = entitymanager.createQuery("SELECT s FROM Show s").getResultList();
 
 		entitymanager.close();
 		emfactory.close();
+		return shows;
 	}
 
 }
